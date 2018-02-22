@@ -1,0 +1,195 @@
+@keyframes circle {
+  0%{
+    transform: rotate(0)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+.g-wrap{
+  position: relative;
+  height: 3300rpx;
+  background-color:#ab0200;
+  text-align: center;
+}
+.bg{
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: 750rpx;
+  height: 3035rpx; 
+}
+.wrap{
+  position:relative;
+  z-index: 1;  
+}
+.deng{
+  display: block;
+  width: 616rpx;
+  height: 285rpx;
+  margin: 0 auto;
+}
+.logo{
+  position: absolute;
+  top:72rpx;
+  left:283.5rpx;
+  display: block;
+  width: 183rpx;
+  height: 49rpx;
+  margin: 0 auto;
+}
+.title-1{
+  position: absolute;
+  top:224rpx;
+  left:225rpx;
+  display: block;
+  width: 300rpx;
+  height: 57rpx;
+  margin: 0 auto;
+}
+.title-2{
+  position: relative; 
+  display: block;
+  width: 553rpx;
+  height: 207rpx;
+  margin: 0 auto;
+}
+.title-3{
+  position: relative; 
+  top: -150rpx; 
+  display: block;
+  width: 342rpx; 
+  height: 500rpx;
+  margin: 0 auto;
+  margin-bottom: -150rpx;
+}
+.userinfo{
+  text-align: center;
+}
+.userinfo-avatar{
+  display: inline-block;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius:200rpx;
+  border:4rpx solid #fff;
+  animation: circle 10s linear infinite;
+}
+.userinfo-nickname{
+  margin-top: 20rpx;
+  color:#fff;
+  font-size: 20pt;
+}
+.tips{
+  margin-top: 12rpx;
+  font-size: 10pt;
+}
+.text-wrap{
+  margin-top: 40rpx;
+  font-size: 14pt;
+  line-height: 2;
+  color:#fff;
+}
+.text-wrap .text{
+  font-size: 12pt;
+}
+.share-btn{
+  width: 500rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin-top: 40rpx;
+  margin-bottom:20rpx;
+}
+.home{
+  position: absolute;
+  bottom:560rpx;
+  left:91.5rpx;
+  width: 567rpx;
+  height: 398rpx;
+}
+.dog{
+  position: absolute;
+  bottom:560rpx;
+  left:250rpx;
+  width: 250rpx;
+  height: 342rpx;
+}
+.yun{
+  position: absolute;
+  bottom:300rpx;
+  left:0;
+  width:750rpx;
+  height: 559rpx;
+}
+.lite-wrap{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 750rpx;
+  height: 500rpx;
+  background-color: #fff;
+}
+.lite-text{
+  font-size: 12pt;
+}
+.lite{
+  margin-top: 30rpx;
+  width: 280rpx;
+   height: 280rpx; 
+}
+.logo-ft{
+  margin-top: 30rpx;
+  width: 181rpx;
+  height: 47rpx;
+}
+.timg-1{
+  position: absolute;
+  top:100rpx;
+  left:105rpx;
+  width: 540rpx;
+  height: 359rpx;
+}
+.timg-2{
+  position: absolute;
+  top:800rpx;
+  left:105rpx;
+  width: 540rpx;
+  height: 359rpx;
+}
+.timg-3{
+  position: absolute;
+  top:1600rpx;
+  left:105rpx;
+  width: 540rpx;
+  height: 359rpx;
+}
+.pao-1{
+  position: absolute;
+  top:1200rpx;
+  left: 0;
+  width: 320rpx;
+  height: 240rpx;
+}
+.pao-2{
+  position: absolute;
+  top:1200rpx;
+  right: 0;
+  width: 320rpx;
+  height: 240rpx;
+}
+.audio{
+  position: fixed;
+  top:40rpx;
+  right: 40rpx;
+  z-index: 1024;
+  width: 80rpx;
+  height: 80rpx;
+}
+.player .audio{
+  position: fixed;
+  top:40rpx;
+  right: 40rpx;
+  z-index: 1024;
+  width: 80rpx;
+  height: 80rpx;
+  animation: circle 2s linear infinite;
+}

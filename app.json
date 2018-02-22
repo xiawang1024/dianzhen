@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ab0200",
+    "navigationBarTitleText": "新春拜年",
+    "navigationBarTextStyle":"#ffffff"
+  }
+}

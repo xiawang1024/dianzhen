@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="g-wrap">
+  <image class='bg' src='../imgs/bg.png'></image>
+  <image class='timg-1' src='../imgs/timg-2.gif'></image> 
+  <image class='timg-2' src='../imgs/timg-2.gif'></image>
+  <image class='timg-3' src='../imgs/timg-2.gif'></image>
+  <image class='pao-1' src='../imgs/timg.gif'></image>
+  <image class='pao-2' src='../imgs/timg.gif'></image>
+  <view class="{{isPlaying ? 'player' : ''}}">
+  <audio style='display:none' src="http://owaup0bqu.bkt.clouddn.com/2018.m4a" id="myAudio" controls loop></audio>
+    <image class='audio' src='../imgs/audio.svg' bindtap='switchPlayState'></image>
+  </view>
+  <view class='wrap'>
+    <image class='deng' src='../imgs/deng.png'></image>
+    <image class='logo' src='../imgs/logo.png'></image>
+    <!-- <image class='title-1' src='../imgs/title-1.png'></image> -->
+    <!-- <image class='title-2' src='../imgs/title-2.png'></image>   -->
+    <image class='title-3' src='../imgs/title-3.png'></image>
+     
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+    <view class=''></view>
+    <view class='tips'>（页面底部可改名字获取专属祝福）</view>
+    <button wx:if="{{isGet}}" class='share-btn' type="primary" open-type="share">转发给好友</button>
+    <view class='text-wrap'>
+      <view class='text'>正月十五闹元宵</view>
+      <view class='text'>万千喜气上眉梢</view>
+      <view class='text'>孩童拎起红灯笼</view>
+      <view class='text'>老少相伴乐融融</view>
+      <view class='text'>合家煮起俏汤圆</view>
+      <view class='text'>一人一口绽笑颜</view>
+      <view class='text'>全家老少齐上阵</view>  
+      <view class='text'>喜猜灯谜笑纷纷</view>
+      <view class='text'>一年一度元宵到</view>
+      <view class='text'>愿友开怀乐淘陶</view>    
+    </view>    
+    <view class='text-wrap'>
+     
+      <view class='text'>祝您在这个元宵节万事皆圆</view>
+      <view class='text'>圆满如意</view>
+      <view class='text'>尽享幸福团圆!</view>
+          
+    </view>
+  </view>
+  
+  <button class='share-btn' type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 定制您的专属祝福 </button>
+  
+  <image class='home' src='../imgs/home.png'></image>
+  <image class='dog' src='../imgs/dog.gif'></image>
+  <image class='yun' src='../imgs/yun.png'></image>
+
+  
+  <view class='lite-wrap'>
+    <view class='lite-text'>河南广播小程序</view>
+    <image bindtap="goToHndt" class='lite' src='../imgs/lite-logo.png'></image>
+    <view>
+      <image class='logo-ft' src='../imgs/logo-ft.png'></image>
+    </view>
+  </view>
+</view>

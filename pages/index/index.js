@@ -1,9 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const api = require('../../api/index.js')
 // const backgroundAudioManager = wx.getBackgroundAudioManager()
 // backgroundAudioManager.src = 'http://owaup0bqu.bkt.clouddn.com/wangfei.mp3'
-const TEXT = '祝您2018狗年新年快乐！'
+const TEXT = '祝您狗年元宵节快乐！'
+
 Page({
   data: {
     motto: 'Hello World',
@@ -11,7 +13,8 @@ Page({
     hasUserInfo: false,
     isGet:false,
     isPlaying:true,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    dog: '\ud83d\udc36'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -46,12 +49,13 @@ Page({
     this.audioCtx.play()
   },
   onLoad: function () {
-  
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+      this.setBarTitle()
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
@@ -77,14 +81,24 @@ Page({
   },
   getUserInfo: function(e) {
     console.log(e)
+    let detail = e.detail
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
-      userInfo: e.detail.userInfo,
+      userInfo: detail.userInfo,
       hasUserInfo: true,
       isGet:true
     })
     this.setBarTitle()
     this.pageScroll()
+    let iv = detail.iv
+    let encryptedData = detail.encryptedData
+    this._postUserInfo(iv, encryptedData)
+  },
+  _postUserInfo(iv, encryptedData) {
+    let code = app.globalData.code
+    api.postUserInfo(code, iv, encryptedData).then((res) => {
+      console.log(res)
+    })
   },
   setBarTitle() {
     let pageTitle = this.data.userInfo.nickName + TEXT
@@ -113,7 +127,7 @@ Page({
       console.log(res.from)
     }
     return {
-      title: this.data.userInfo.nickName + '祝您2018狗年新年快乐！',
+      title: this.data.userInfo.nickName + '祝您狗年元宵节快乐！',
       path: "pages/index/index",
       success: function (res) {
         console.log(res)

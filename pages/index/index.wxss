@@ -71,7 +71,8 @@
   width: 200rpx;
   height: 200rpx;
   border-radius:200rpx;
-  border:4rpx solid #fff;
+  /* border:4rpx solid #fff; */
+  box-sizing: border-box;
   animation: circle 10s linear infinite;
 }
 .userinfo-nickname{
@@ -79,20 +80,28 @@
   color:#fff;
   font-size: 20pt;
 }
+.user-say{
+  margin-top: 8rpx;
+  font-size: 16pt;
+  color: #fff
+}
 .tips{
   margin-top: 12rpx;
   font-size: 10pt;
+  color:#000;
 }
 .text-wrap{
-  margin-top: 40rpx;
+  margin-top: 30rpx;
   font-size: 14pt;
-  line-height: 2;
+  line-height: 1.9;
   color:#fff;
 }
 .text-wrap .text{
   font-size: 12pt;
 }
 .share-btn{
+  position: relative;
+  z-index: 1024;
   width: 500rpx;
   height: 120rpx;
   line-height: 120rpx;
@@ -135,6 +144,9 @@
   margin-top: 30rpx;
   width: 280rpx;
    height: 280rpx; 
+}
+.lite-tips{
+  font-size: 8pt;
 }
 .logo-ft{
   margin-top: 30rpx;

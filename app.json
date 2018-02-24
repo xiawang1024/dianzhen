@@ -6,7 +6,8 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#ab0200",
-    "navigationBarTitleText": "新春拜年",
-    "navigationBarTextStyle":"#ffffff"
+    "navigationBarTitleText": "戊戌年元宵节",
+    "navigationBarTextStyle":"#ffffff",
+    "backgroundColor":"#ab0200"
   }
 }

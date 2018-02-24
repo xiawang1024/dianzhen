@@ -19,7 +19,7 @@
      
     <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <view class="userinfo-nickname">{{userInfo.nickName}}</view>
-    <view class=''></view>
+    <view class='user-say'>祝您狗{{dog}}年元宵节快乐！</view>
     <view class='tips'>（页面底部可改名字获取专属祝福）</view>
     <button wx:if="{{isGet}}" class='share-btn' type="primary" open-type="share">转发给好友</button>
     <view class='text-wrap'>
@@ -36,7 +36,7 @@
     </view>    
     <view class='text-wrap'>
      
-      <view class='text'>祝您在这个元宵节万事皆圆</view>
+      <view class='text'>祝您在狗年元宵节万事皆圆</view>
       <view class='text'>圆满如意</view>
       <view class='text'>尽享幸福团圆!</view>
           
@@ -53,6 +53,7 @@
   <view class='lite-wrap'>
     <view class='lite-text'>河南广播小程序</view>
     <image bindtap="goToHndt" class='lite' src='../imgs/lite-logo.png'></image>
+    <view class='lite-tips'>（点击小程序码进入）</view>
     <view>
       <image class='logo-ft' src='../imgs/logo-ft.png'></image>
     </view>

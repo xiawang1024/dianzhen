@@ -8,7 +8,7 @@
 }
 .g-wrap{
   position: relative;
-  height: 3300rpx;
+  height: 3050rpx;
   background-color:#ab0200;
   text-align: center;
 }
@@ -93,7 +93,7 @@
 .text-wrap{
   margin-top: 30rpx;
   font-size: 14pt;
-  line-height: 1.9;
+  line-height: 2;
   color:#fff;
 }
 .text-wrap .text{
@@ -110,26 +110,27 @@
 }
 .home{
   position: absolute;
-  bottom:560rpx;
+  bottom:260rpx;
   left:91.5rpx;
   width: 567rpx;
   height: 398rpx;
 }
 .dog{
   position: absolute;
-  bottom:560rpx;
+  bottom:260rpx;
   left:250rpx;
   width: 250rpx;
   height: 342rpx;
 }
 .yun{
   position: absolute;
-  bottom:300rpx;
+  bottom:0rpx;
   left:0;
   width:750rpx;
   height: 559rpx;
 }
 .lite-wrap{
+  display: none;
   position: absolute;
   bottom: 0;
   left:0;

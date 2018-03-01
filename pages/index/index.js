@@ -18,9 +18,9 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    // wx.navigateTo({
+    //   url: '../logs/logs'
+    // })
   },
   switchPlayState() {
     let isPlay = this.data.isPlaying
@@ -38,6 +38,7 @@ Page({
     }
     
   },
+  
   onShow() {
     if(this.audioCtx) {
       this.audioCtx.play()
@@ -48,8 +49,12 @@ Page({
     this.audioCtx = wx.createAudioContext('myAudio')
     this.audioCtx.play()
   },
-  onLoad: function () {
-    
+  onLoad: function (options) {
+    wx.showToast({
+      title: options.id,
+      icon: 'success',
+      duration: 20000
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -80,6 +85,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
+    
     console.log(e)
     let detail = e.detail
     app.globalData.userInfo = e.detail.userInfo
@@ -128,7 +134,7 @@ Page({
     }
     return {
       title: this.data.userInfo.nickName + '祝您狗年元宵节快乐！',
-      path: "pages/index/index",
+      path: "pages/index/index?id=" + this.data.userInfo.avatarUrl,
       success: function (res) {
         console.log(res)
         // 转发成功
